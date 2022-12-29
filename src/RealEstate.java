@@ -159,7 +159,7 @@ public class RealEstate {
     }
 
     public void removeProperty (User user) {
-        if (propertyArrayIsNull(this.properties)) {
+        if (propertyArrayIsNull(this.properties) || this.properties.length == 0) {
             System.out.println("There are no listings in the system." + "\n");
         } else {
             int count = 0;
@@ -196,7 +196,7 @@ public class RealEstate {
     }
 
     public void printAllProperties () {
-        if (propertyArrayIsNull(this.properties)) {
+        if (propertyArrayIsNull(this.properties) || this.properties.length == 0) {
             System.out.println("There are no listings in the system." + "\n");
         } else {
             for (int i = 0; i < this.properties.length; i++) {
@@ -206,7 +206,7 @@ public class RealEstate {
     }
 
     public void printProperties (User user) {
-        if (propertyArrayIsNull(this.properties)) {
+        if (propertyArrayIsNull(this.properties) || this.properties.length == 0) {
             System.out.println("There are no listings in the system" + "\n");
         } else {
             int count = 0;
@@ -224,7 +224,7 @@ public class RealEstate {
 
     public Property[] search () {
         Property[] filteredProperties;
-        if (propertyArrayIsNull(this.properties)) {
+        if (propertyArrayIsNull(this.properties) || this.properties.length == 0) {
             System.out.println("There are no listings in the system." + "\n");
             filteredProperties = null;
         } else {
